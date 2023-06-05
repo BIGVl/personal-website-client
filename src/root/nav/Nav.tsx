@@ -5,11 +5,12 @@ import { MouseEvent, useState } from 'react';
 
 export default function Nav() {
   const [indicatorStyle, setIndicatorStyle] = useState({});
+  const [activeLink, setActiveLink] = useState('');
 
   const onLinkClick = (e: MouseEvent<HTMLAnchorElement>) => {
     const target = e.target as HTMLElement;
+    setActiveLink(target.getAttribute('href') as string);
     const { left, width } = target.getBoundingClientRect();
-    console.log(left);
     const newIndicatorStyle = {
       left: `${left}px`,
       width: `${width}px`
@@ -24,27 +25,27 @@ export default function Nav() {
       </Link>
       <ul className="links">
         <li>
-          <HashLink onClick={onLinkClick} smooth to={'/#about'}>
+          <HashLink onClick={onLinkClick} smooth to={'/#about'} className={activeLink === '/#about' ? 'active' : ''}>
             About
           </HashLink>
         </li>
         <li>
-          <HashLink onClick={onLinkClick} to={'/#projects'}>
+          <HashLink onClick={onLinkClick} to={'/#projects'} className={activeLink === '/#projects' ? 'active' : ''}>
             Projects
           </HashLink>
         </li>
         <li>
-          <HashLink onClick={onLinkClick} to={'/#contact'}>
+          <HashLink onClick={onLinkClick} to={'/#contact'} className={activeLink === '/#contact' ? 'active' : ''}>
             Contact
           </HashLink>
         </li>
         <li>
-          <Link onClick={onLinkClick} to={'/blog'}>
+          <Link onClick={onLinkClick} to={'/blog'} className={activeLink === '/blog' ? 'active' : ''}>
             Blog
           </Link>
         </li>
       </ul>
-      <div className="indicator" style={indicatorStyle}>
+      <div className={`indicator ${!activeLink && 'invisible'} `} style={indicatorStyle}>
         <div className="circle"></div>
       </div>
     </nav>

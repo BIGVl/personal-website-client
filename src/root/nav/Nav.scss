@@ -1,5 +1,4 @@
 nav {
-  // background-color: var(--leather);
   position: relative;
   padding: 1rem;
   display: flex;
@@ -15,6 +14,12 @@ nav {
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding: 1rem;
+  }
+
+  .active {
+    color: var(--coral);
   }
 
   .logo {
@@ -30,7 +35,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: left 0.4s ease-in-out;
+    transition: left 0.2s ease-in-out;
 
     .circle {
       height: 0.4rem;
@@ -38,5 +43,8 @@ nav {
       border-radius: 50%;
       background-color: var(--coral);
     }
+  }
+  .invisible {
+    display: none;
   }
 }
