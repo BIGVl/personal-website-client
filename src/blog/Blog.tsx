@@ -6,6 +6,7 @@ import createTimeAndDate from './helpers/createTimeAndDate';
 
 export default function Blog() {
   const [articles, setArticles] = useState<ArticleSummary[]>([]);
+  console.log('Blog gets called');
 
   useEffect(() => {
     (async () => {

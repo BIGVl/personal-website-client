@@ -1,0 +1,13 @@
+nav {
+  background-color: var(--navy-blue);
+  padding: 0.5rem 1rem;
+
+  .links {
+    display: flex;
+    gap: 2rem;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
