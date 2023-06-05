@@ -9,3 +9,6 @@
 - Scss
 - React testing library
 - Vite
+- React router dom
+
+### The folder structure is folder-by-feature, the app folder is for components that are used globally or directly in the App file
