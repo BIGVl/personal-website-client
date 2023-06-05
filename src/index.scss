@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300&family=Major+Mono+Display&family=Monofett&display=swap');
+
 *,
 *::before,
 *::after {
@@ -8,6 +10,8 @@
   --leather: #ab987a;
   --eggshell: #f5f5f5;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
