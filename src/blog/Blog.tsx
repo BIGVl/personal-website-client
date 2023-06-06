@@ -6,7 +6,6 @@ import createTimeAndDate from './helpers/createTimeAndDate';
 
 export default function Blog() {
   const [articles, setArticles] = useState<ArticleSummary[]>([]);
-  console.log('Blog gets called');
 
   useEffect(() => {
     (async () => {
@@ -23,7 +22,7 @@ export default function Blog() {
             article.author?.firstName && article.author?.lastName
               ? `${article.author.firstName} ${article.author.lastName}`
               : 'Mysterious unknown author';
-          console.log(article.createdAt);
+
           const { time, date } = createTimeAndDate(article.createdAt);
           return (
             <ul key={article._id} className="article-summary">

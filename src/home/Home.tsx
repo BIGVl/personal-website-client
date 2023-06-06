@@ -4,8 +4,11 @@ import './Home.scss';
 export default function Home() {
   return (
     <div className="home">
-      <div> This is home </div>
       <About />
+      <div className="introduce-projects">
+        <span className="explore"> Explore the projects that I want to impress with ! </span>{' '}
+        <span className="hope"> Hope it works &#128512; </span>
+      </div>
     </div>
   );
 }

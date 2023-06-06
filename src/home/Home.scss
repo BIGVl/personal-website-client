@@ -1,5 +1,23 @@
 .home {
-  display: flex;
-  flex-direction: column;
-  gap: 100vh;
+  .introduce-projects {
+    margin-top: 8rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: transparent;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    .explore {
+      background: linear-gradient(to right, var(--coral), var(--blue) 60%);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    .hope {
+      background: linear-gradient(to left, var(--coral), var(--blue) 60%);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+  }
 }
